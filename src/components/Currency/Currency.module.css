@@ -1,0 +1,61 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputSection p {
+    display: inline-block;
+    width: 280px;
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.inputSection input {
+    width: 280px;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid white;
+
+    transition: border 0.4s ease;
+}
+
+.inputSection input:hover {
+    border: 2px solid gold;
+    outline: none;
+}
+
+.inputSection input:focus {
+    border: 2px solid gold;
+    outline: none;
+}
+
+
+
+.outputSection p {
+    display: inline-block;
+    width: 280px;
+    color: white;
+    padding-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.outputSection output {
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 5px;
+
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid gold;
+
+}
+
+

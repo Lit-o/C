@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Exchange from "./components/Exchange/Exchange";
+import Currency from "./components/Currency/Currency";
+import {Redirect, Route} from "react-router-dom";
+import Header from "./components/Header/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="appWrapper">
+                <Header/>
+                <Redirect from="/" to="/exchange" />
+                <Route render={Exchange} exact path="/exchange"/>
+                <Route render={Currency} exact path="/currency"/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
