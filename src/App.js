@@ -1,10 +1,14 @@
 import './App.css';
-import Exchange from "./components/Exchange/Exchange";
 import Currency from "./components/Currency/Currency";
 import {Redirect, Route} from "react-router-dom";
 import Header from "./components/Header/Header";
+import ExchangeContainer from "./components/Exchange/ExchangeContainer";
+import React from "react";
 
 function App() {
+
+    let Exchange = () => <ExchangeContainer/>
+
     return (
         <div className="App">
             <div className="appWrapper">
