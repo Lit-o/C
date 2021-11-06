@@ -18,9 +18,7 @@
     font-size: 18px;
     color: white;
     border-bottom: 1px solid gold;
-
 }
-
 
 .Main table {
     width: 280px;
@@ -41,9 +39,6 @@
     padding: 10px;
     border: 1px solid gold;
 }
-
-
-
 
 .Main ul {
     /*margin-bottom: auto;*/
@@ -68,7 +63,6 @@
 }
 
 .link:hover {
-
     border: 1px solid gold;
     background-color: gold;
     color: #333;
