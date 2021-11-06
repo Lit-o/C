@@ -1,7 +1,6 @@
 import style from "../Exchange/Exchange.module.css";
 import {useEffect} from "react";
 
-
 const Exchange = (props) => {
 
     let userLang = navigator.language || navigator.userLanguage;
@@ -28,24 +27,28 @@ const Exchange = (props) => {
     }
 
     let interests = props.exchange.interests.filter(el => el !== baseApp)
-    console.log(interests);
 
     useEffect( () => {
-        props.setActualRates(baseApp, interests);
+        props.setActualRates(interests, baseApp);
     }, [])
 
-    console.log(props);
+
+    let table = props.exchange.actualRates.map(el => {
+        let actualBaseApp = props.exchange.baseApp
+        return <tr><td>1 {el.base}</td><td>{el.rates[actualBaseApp]}</td></tr>
+    })
 
     return (
         <div className={style.Main}>
             <h2 className="visuallyHidden">Exchange rates</h2>
             <div className={style.baseCurrency}>
-                <p>Your base currency: {props.exchange.base}</p>
+                <p>Your base currency: {props.exchange.baseApp}</p>
             </div>
             <table>
-                <tr><th>From</th><th>To</th></tr>
-                <tr><td>USD</td><td>31.002312</td></tr>
-                <tr><td>EUR</td><td>28.005519</td></tr>
+                <tbody>
+                    <tr><th>From</th><th>To</th></tr>
+                    {table}
+                </tbody>
             </table>
         </div>
     )

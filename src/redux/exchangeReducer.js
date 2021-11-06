@@ -5,8 +5,8 @@ const ADD_ACTUAL_RATES = 'C/SRC/REDUX/EXCHANGE_REDUCER/ADD_ACTUAL_RATES'
 
 let initialState = {
     baseApp: 'USD',
-    interests: ['EUR','USD','RUB'],
-    actualRates: {},
+    interests: ['USD','EUR','RUB'],
+    actualRates: [],
     isFetching: false
 }
 
@@ -15,13 +15,13 @@ const exchangeReducer = (state = initialState, action) => {
         case ADD_BASE_CURRENCY: {
             return  {
                 ...state,
-                baseApp: action.baseApp
+                baseApp: action.base
             }
         }
         case ADD_ACTUAL_RATES: {
             return  {
                 ...state,
-                actualRates: {...action.actualRates}
+                actualRates: [...action.actualRates]
             }
         }
         default:
@@ -29,16 +29,16 @@ const exchangeReducer = (state = initialState, action) => {
     }
 }
 
-export const setBaseAC = (baseApp) => ({type: ADD_BASE_CURRENCY, baseApp});
+export const setBaseAC = (base) => ({type: ADD_BASE_CURRENCY, base});
 export const getActualRatesAC = (actualRates) => ({type: ADD_ACTUAL_RATES, actualRates});
 
 
-export const setActualRatesTC = (baseApp, interests) => {
+export const setActualRatesTC = (interests, baseApp) => {
     return (dispatch) => {
         dispatch(setBaseAC(baseApp))
-        currencyAPI.getRates(baseApp, interests).then(response => {
-            dispatch(getActualRatesAC(response.rates))
-        })
+        currencyAPI.getArrRates(interests, baseApp).then(response => {
+                dispatch(getActualRatesAC(response))
+            })
     }
 }
 

@@ -13,8 +13,8 @@ let mapDispatchToProps = (dispatch) => {
         setBase: (base) => {
             dispatch(setBaseAC(base))
         },
-        setActualRates: (base) => {
-            dispatch(setActualRatesTC(base))
+        setActualRates: (interests, baseApp) => {
+            dispatch(setActualRatesTC(interests, baseApp))
         }
     }
 }
