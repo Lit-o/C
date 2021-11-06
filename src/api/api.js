@@ -5,13 +5,6 @@ const instance = axios.create({
 })
 
 export const currencyAPI = {
-    getRates(base, symbols) {
-        return instance.get("?base=" + base + "&symbols=" + symbols)
-            .then(response => {
-                return response.data
-            })
-    },
-
     getArrRates(baseArr, symbols) {
         return axios.all(baseArr.map(result => {
             return instance.get("?base=" + result + "&symbols=" + symbols)
@@ -19,6 +12,14 @@ export const currencyAPI = {
                     return response.data
                 })
         }))
+    },
+
+    convert(base, interest, value) {
+        return instance.get("?base=" + base + "&symbols=" + interest + "&amount=" + value)
+            .then(response => {
+                console.log(response.data.rates[interest])
+                return response.data.rates[interest]
+            })
     }
 }
 

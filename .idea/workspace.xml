@@ -10,12 +10,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d71f091d-fc9c-42cf-b806-f7fd22539c3a" name="Default Changelist" comment="added Exchange BLL">
+    <list default="true" id="d71f091d-fc9c-42cf-b806-f7fd22539c3a" name="Default Changelist" comment="added Converter BLL">
+      <change afterPath="$PROJECT_DIR$/src/components/Converter/ConverterContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/converterReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Exchange/Exchange.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Exchange/Exchange.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Currency/Currency.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Converter/Converter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Currency/Currency.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Converter/Converter.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Exchange/ExchangeContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Exchange/ExchangeContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/exchangeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/exchangeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ftr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Currency" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -52,8 +58,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\1_FRONTEND\Learn\React\Projects\c\src\components\Header" />
       <recent name="E:\1_FRONTEND\Learn\React\Projects\c\src\components\Currency" />
+      <recent name="E:\1_FRONTEND\Learn\React\Projects\c\src\components\Header" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -83,7 +89,7 @@
       <updated>1636020663715</updated>
       <workItem from="1636020665565" duration="1071000" />
       <workItem from="1636021811254" duration="38878000" />
-      <workItem from="1636186210198" duration="9511000" />
+      <workItem from="1636186210198" duration="20273000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1636022537670</created>
@@ -106,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636136119193</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Exchange BLL work done">
+      <created>1636213076715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636213076715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,9 +141,15 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="added UI" />
     <MESSAGE value="added Exchange BLL" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Exchange BLL" />
+    <MESSAGE value="added Exchange BLL work done" />
+    <MESSAGE value="added Converter BLL" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Converter BLL" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636213572008">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636213572008" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1636186240301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,13 +174,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636020949459" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636136213664">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636213102353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636136213664" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636213102353" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1636022247099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636022247099" />
+    <state x="616" y="242" key="run.anything.popup" timestamp="1636216507155">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636216507155" />
   </component>
 </project>

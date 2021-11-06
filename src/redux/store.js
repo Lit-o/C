@@ -1,9 +1,11 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunk from "redux-thunk";
 import exchangeReducer from "./exchangeReducer";
+import converterReducer from "./converterReducer";
 
 let reducers = combineReducers({
-        exchangePage: exchangeReducer
+        exchangePage: exchangeReducer,
+        converterPage: converterReducer
     }
 )
 

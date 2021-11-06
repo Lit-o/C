@@ -1,6 +1,6 @@
 import Exchange from "./Exchange";
 import {connect} from "react-redux";
-import {setActualRatesTC, setBaseAC} from "../../redux/exchangeReducer";
+import {setActualRatesTC} from "../../redux/exchangeReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -10,9 +10,6 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        setBase: (base) => {
-            dispatch(setBaseAC(base))
-        },
         setActualRates: (interests, baseApp) => {
             dispatch(setActualRatesTC(interests, baseApp))
         }
