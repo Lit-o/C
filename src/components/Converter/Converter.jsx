@@ -1,13 +1,16 @@
 import style from "./Converter.module.css";
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useMemo} from "react";
 
 // base, interest, value
 const Converter = (props) => {
 
     const [value, setValue] = useState(false)
     const [hello, setHello] = useState('Hello, write and send request')
-    // const [isFetching, setIsFetching] = useState(false)
     const isFetching = props.converter.isFetching
+
+    useEffect(() => {
+        setHello('Hello, write and send request')
+    }, [])
 
     const sendDataToConvert = (value) => {
         const base = value.slice(-10, -7).toUpperCase()
@@ -22,10 +25,6 @@ const Converter = (props) => {
             sendDataToConvert(value)
         }
     }
-
-    // useEffect(() => {
-
-    // }, [])
 
     const onValueChange = (e) => {
         setValue(e.currentTarget.value);
