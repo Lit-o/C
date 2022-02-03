@@ -2,13 +2,13 @@ import Converter from "./Converter";
 import {connect} from "react-redux";
 import {getConvertTC} from "../../redux/converterReducer";
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
     return {
         converter: state.converterPage,
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         getConvert: (base, interest, value) => {
             dispatch(getConvertTC(base, interest, value))

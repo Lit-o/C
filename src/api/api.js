@@ -5,6 +5,7 @@ const instance = axios.create({
 })
 
 export const currencyAPI = {
+    
     getArrRates(baseArr, symbols) {
         return axios.all(baseArr.map(result => {
             return instance.get("?base=" + result + "&symbols=" + symbols)

@@ -7,8 +7,8 @@ import ConverterContainer from "./components/Converter/ConverterContainer";
 
 function App() {
 
-    let Exchange = () => <ExchangeContainer/>
-    let Converter = () => <ConverterContainer/>
+    const Exchange = () => <ExchangeContainer/>
+    const Converter = () => <ConverterContainer/>
 
     return (
         <div className="App">

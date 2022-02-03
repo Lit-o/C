@@ -4,22 +4,22 @@ import React, {useState} from "react";
 // base, interest, value
 const Converter = (props) => {
 
-    let [value, setValue] = useState(false)
+    const [value, setValue] = useState(false)
 
-    let sendDataToConvert = (value) => {
-        let base = value.slice(-10, -7).toUpperCase()
-        let interest = value.slice(-3).toUpperCase()
-        let requiredValue = parseFloat(value)
+    const sendDataToConvert = (value) => {
+        const base = value.slice(-10, -7).toUpperCase()
+        const interest = value.slice(-3).toUpperCase()
+        const requiredValue = parseFloat(value)
         props.getConvert(base, interest, requiredValue)
     }
 
-    let onEnterPress = (event) => {
+    const onEnterPress = (event) => {
         if(event.key === 'Enter'){
             sendDataToConvert(value)
         }
     }
 
-    let onValueChange = (e) => {
+    const onValueChange = (e) => {
         setValue(e.currentTarget.value);
     }
 
@@ -47,7 +47,6 @@ const Converter = (props) => {
                         ? 'respect the format'
                         : props.converter.result.toFixed(3)
                     }
-
                 </output>
             </div>
         </div>

@@ -26,15 +26,15 @@ const Exchange = (props) => {
             baseApp = "USD"
     }
 
-    let interests = props.exchange.interests.filter(el => el !== baseApp)
+    const interests = props.exchange.interests.filter(el => el !== baseApp)
 
     useEffect( () => {
         props.setActualRates(interests, baseApp);
     }, [])
 
 
-    let table = props.exchange.actualRates.map(el => {
-        let actualBaseApp = props.exchange.baseApp
+    const table = props.exchange.actualRates.map(el => {
+        const actualBaseApp = props.exchange.baseApp
         return <tr><td>1 {el.base}</td><td>{el.rates[actualBaseApp]}</td></tr>
     })
 
