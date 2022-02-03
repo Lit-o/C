@@ -29,14 +29,18 @@ const Exchange = (props) => {
     const interests = props.exchange.interests.filter(el => el !== baseApp)
 
     useEffect( () => {
+        console.log('send request')
         props.setActualRates(interests, baseApp);
-    }, [])
+    // eslint-disable-next-line
+    }, [baseApp])
 
 
-    const table = props.exchange.actualRates.map(el => {
+    const table = props.exchange.actualRates.map((el, i) => {
         const actualBaseApp = props.exchange.baseApp
-        return <tr><td>1 {el.base}</td><td>{el.rates[actualBaseApp]}</td></tr>
+        return <tr key={i}><td>1 {el.base}</td><td>{el.rates[actualBaseApp]}</td></tr>
     })
+
+    console.log('rerender')
 
     return (
         <div className={style.Main}>

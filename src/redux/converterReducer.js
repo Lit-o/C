@@ -1,4 +1,4 @@
-import {currencyAPI} from "../api/api";
+import { currencyAPI } from "../api/api";
 
 const CURRENCY_CONVERT = 'C/SRC/REDUX/CONVERT_REDUCER/CURRENCY_CONVERT';
 const CURRENCY_CONVERT_STATE = 'C/SRC/REDUX/CONVERT_REDUCER/CURRENCY_CONVERT_STATE'
@@ -13,16 +13,18 @@ let initialState = {
 const converterReducer = (state = initialState, action) => {
     switch (action.type) {
         case CURRENCY_CONVERT_STATE: {
-            return  {
+            return {
                 ...state,
                 base: action.base,
-                interest: action.interest
+                interest: action.interest,
+                isFetching: true
             }
         }
         case CURRENCY_CONVERT: {
-            return  {
+            return {
                 ...state,
                 result: action.result,
+                isFetching: false
             }
         }
         default:
@@ -30,8 +32,8 @@ const converterReducer = (state = initialState, action) => {
     }
 }
 
-export const getConvertAC = (result) => ({type: CURRENCY_CONVERT, result});
-export const getConvertStateAC = (base, interest) => ({type: CURRENCY_CONVERT, base, interest});
+export const getConvertAC = (result) => ({ type: CURRENCY_CONVERT, result });
+export const getConvertStateAC = (base, interest) => ({ type: CURRENCY_CONVERT_STATE, base, interest });
 
 export const getConvertTC = (base, interest, value) => {
     return (dispatch) => {

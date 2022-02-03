@@ -1,10 +1,13 @@
 import style from "./Converter.module.css";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 // base, interest, value
 const Converter = (props) => {
 
     const [value, setValue] = useState(false)
+    const [hello, setHello] = useState('Hello, write and send request')
+    // const [isFetching, setIsFetching] = useState(false)
+    const isFetching = props.converter.isFetching
 
     const sendDataToConvert = (value) => {
         const base = value.slice(-10, -7).toUpperCase()
@@ -15,14 +18,22 @@ const Converter = (props) => {
 
     const onEnterPress = (event) => {
         if(event.key === 'Enter'){
+            setHello('')
             sendDataToConvert(value)
         }
     }
+
+    // useEffect(() => {
+
+    // }, [])
 
     const onValueChange = (e) => {
         setValue(e.currentTarget.value);
     }
 
+    const fetchingMessage = isFetching && 'loading, please wait'
+    const somethingWrongMessage = (props.converter.result === undefined || props.converter.result === null) && 'Error, respect the format'
+    let outputValue = !!(props.converter.result) && props.converter.result.toFixed(3)
     return (
         <div className={style.Main}>
             <h2 className="visuallyHidden">Currency converter</h2>
@@ -31,9 +42,8 @@ const Converter = (props) => {
                     <br/>
                     Example: <strong>15 usd in rub</strong>
                 </p>
-
                 <div>
-                    <input autoFocus={'true'}
+                    <input autoFocus={true}
                            onKeyPress={onEnterPress}
                            onChange={onValueChange}
                            type="text"/>
@@ -43,10 +53,10 @@ const Converter = (props) => {
             <div className={style.outputSection}>
                 <p>result</p>
                 <output name="result">
-                    {(props.converter.result === undefined || props.converter.result === null)
-                        ? 'respect the format'
-                        : props.converter.result.toFixed(3)
-                    }
+                    {hello}
+                    {fetchingMessage}
+                    {!fetchingMessage && somethingWrongMessage}
+                    {!(fetchingMessage || somethingWrongMessage) && outputValue}
                 </output>
             </div>
         </div>
