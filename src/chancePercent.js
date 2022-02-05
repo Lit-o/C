@@ -1,4 +1,3 @@
-
 // рандомайзер возвращает результат включая и min и мах значение. 
 // если убрать +1, то верхнее значение не будет включено в ответы
 // const randomiser = (min, max) => {
@@ -21,9 +20,11 @@
 // const result = random <= percent
 // console.log('result ==> ' + result)
 
-const isGotAChance = (percent) => {
-    const _random = Math.floor(Math.random() * 100) + 1;
-    return _random <= percent
-}
+// const isGotAChance = (percent) => {
+//     const _random = Math.floor(Math.random() * 100) + 1;
+//     return _random <= percent
+// }
 
-console.log(isGotAChance(10))
+const isChance = percent => (Math.floor(Math.random() * 100) + 1) <= percent
+
+console.log(isChance(90))
