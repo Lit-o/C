@@ -1,5 +1,5 @@
 import style from "../Exchange/Exchange.module.css";
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 const Exchange = (props) => {
 
@@ -28,10 +28,10 @@ const Exchange = (props) => {
 
     const interests = props.exchange.interests.filter(el => el !== baseApp)
 
-    useEffect( () => {
+    useEffect(() => {
         console.log('send request')
         props.setActualRates(interests, baseApp);
-    // eslint-disable-next-line
+        // eslint-disable-next-line
     }, [baseApp])
 
 

@@ -1,6 +1,6 @@
 import Converter from "./Converter";
-import {connect} from "react-redux";
-import {getConvertTC} from "../../redux/converterReducer";
+import { connect } from "react-redux";
+import { getConvertTC } from "../../redux/converterReducer";
 
 const mapStateToProps = (state) => {
     return {
