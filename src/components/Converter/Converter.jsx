@@ -1,9 +1,9 @@
 import style from "./Converter.module.css";
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 
 // base, interest, value
 const Converter = (props) => {
-    console.log('Render Converter')
+    // console.log('Render Converter')
     const [value, setValue] = useState(false)
     const [hello, setHello] = useState('Hello, write and send request')
     const isFetching = props.converter.isFetching

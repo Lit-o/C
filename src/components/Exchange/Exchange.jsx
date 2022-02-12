@@ -5,8 +5,9 @@ const Exchange = (props) => {
 
     let userLang = navigator.language || navigator.userLanguage;
     userLang = userLang.slice(0, 2).toLowerCase();
-
+    
     let baseApp
+
     switch (userLang) {
         case 'ru':
             baseApp = "RUB";
@@ -29,7 +30,7 @@ const Exchange = (props) => {
     const interests = props.exchange.interests.filter(el => el !== baseApp)
 
     useEffect(() => {
-        console.log('send request')
+        // console.log('send request')
         props.setActualRates(interests, baseApp);
         // eslint-disable-next-line
     }, [baseApp])
@@ -40,7 +41,7 @@ const Exchange = (props) => {
         return <tr key={i}><td>1 {el.base}</td><td>{el.rates[actualBaseApp]}</td></tr>
     })
 
-    console.log('rerender')
+    // console.log('rerender')
 
     return (
         <div className={style.Main}>
