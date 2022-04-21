@@ -1,5 +1,5 @@
 import style from "./Header.module.css"
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
                     <li><NavLink className={style.link} to="/exchange" activeClassName={style.active}>Exchange
                         rates</NavLink></li>
                     <li><NavLink className={style.link} to="/converter"
-                                 activeClassName={style.active}>Currency converter</NavLink></li>
+                        activeClassName={style.active}>Currency converter</NavLink></li>
                 </ul>
             </nav>
         </header>

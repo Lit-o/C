@@ -1,6 +1,6 @@
 import Exchange from "./Exchange";
-import {connect} from "react-redux";
-import {setActualRatesTC} from "../../redux/exchangeReducer";
+import { connect } from "react-redux";
+import { setActualRatesTC } from "../../redux/exchangeReducer";
 
 const mapStateToProps = (state) => {
     return {

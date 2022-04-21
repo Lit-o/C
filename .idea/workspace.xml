@@ -10,11 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d71f091d-fc9c-42cf-b806-f7fd22539c3a" name="Default Changelist" comment="added Converter BLL">
+    <list default="true" id="d71f091d-fc9c-42cf-b806-f7fd22539c3a" name="Default Changelist" comment="added small cleaning refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Converter/Converter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Converter/Converter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Exchange/Exchange.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Exchange/Exchange.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Currency" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,6 +58,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -69,6 +78,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -82,7 +96,10 @@
       <updated>1636020663715</updated>
       <workItem from="1636020665565" duration="1071000" />
       <workItem from="1636021811254" duration="38878000" />
-      <workItem from="1636186210198" duration="21686000" />
+      <workItem from="1636186210198" duration="21869000" />
+      <workItem from="1636227845057" duration="605000" />
+      <workItem from="1637096500702" duration="662000" />
+      <workItem from="1637176107067" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1636022537670</created>
@@ -119,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636225039897</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added small cleaning refactor">
+      <created>1636227599410</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636227599410</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,41 +167,42 @@
     <MESSAGE value="added Exchange BLL" />
     <MESSAGE value="added Exchange BLL work done" />
     <MESSAGE value="added Converter BLL" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Converter BLL" />
+    <MESSAGE value="added small cleaning refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="added small cleaning refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636213572008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636213572008" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1636186240301">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1637096539099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636186240301" />
-    <state width="1882" height="279" key="GridCell.Tab.0.bottom" timestamp="1636204801038">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1637096539099" />
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom" timestamp="1636228390451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636204801038" />
-    <state width="1882" height="279" key="GridCell.Tab.0.center" timestamp="1636204801038">
+    <state width="1899" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636228390451" />
+    <state width="1899" height="281" key="GridCell.Tab.0.center" timestamp="1636228390451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636204801038" />
-    <state width="1882" height="279" key="GridCell.Tab.0.left" timestamp="1636204801037">
+    <state width="1899" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636228390451" />
+    <state width="1899" height="281" key="GridCell.Tab.0.left" timestamp="1636228390451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636204801037" />
-    <state width="1882" height="279" key="GridCell.Tab.0.right" timestamp="1636204801038">
+    <state width="1899" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636228390451" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right" timestamp="1636228390451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1882" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636204801038" />
+    <state width="1899" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636228390451" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1636020949459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636020949459" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636225057611">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1636227604431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636225057611" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1636227604431" />
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1636022247099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
